@@ -19,7 +19,7 @@ The project uses **React 19**, **Vite**, and optimized **custom CSS**.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/my-shipping-box.git
+git clone https://github.com/singhxamit21/my-shipping-box.git
 cd my-shipping-box
 
 npm install
