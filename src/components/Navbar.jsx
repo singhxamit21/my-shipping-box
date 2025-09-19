@@ -4,7 +4,7 @@ export default function Navbar({ ...props }) {
     const { route, setRoute } = props;
     return (
         <nav className="navbar">
-            <div className="font-bold text-lg">Shipping Box</div>
+            <div className="font-bold text-lg">📦 Shipping Box</div>
             <div>
                 <button
                     onClick={() => setRoute('form')}

@@ -31,7 +31,7 @@ function BoxList({ ...props }) {
 
     return (
         <div className="card">
-            <h2 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>Saved Boxes</h2>
+            <h2 className="form-title">📦 Boxes</h2>
             <CustomTable columns={columns} data={boxes} pageSize={5} />
         </div>
     )
