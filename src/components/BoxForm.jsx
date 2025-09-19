@@ -42,16 +42,24 @@ const BoxForm = ({ onSaved }) => {
     const validate = () => {
         const e = {}
         if (!formData.receiver.trim()) e.receiver = 'Receiver name is required.'
+
         if (formData.weight === '' || formData.weight === null) {
             e.weight = 'Weight is required.'
         } else if (Number(formData.weight) < 0) {
             e.weight = 'Negative values are not permitted. Defaulted to zero.'
             setFormData((prev) => ({ ...prev, weight: 0 }))
         }
-        if (!formData.color) e.color = 'Box colour is required.'
+        
+        if (!formData.color) {
+            e.color = 'Box colour is required.'
+        } else if (!/^#[0-9A-Fa-f]{6}$/.test(formData.color)) {
+            e.color = 'Invalid colour format. Use # followed by 6 hex characters.'
+        }
+
         if (!formData.country) e.country = 'Destination country is required.'
         return e
     }
+
 
     const handleSave = async () => {
         const v = validate()
